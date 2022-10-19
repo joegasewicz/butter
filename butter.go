@@ -2,7 +2,7 @@ package butter
 
 import "reflect"
 
-// Merge merges 2 structs of the same type & returns a map
+// Merge merges two structs of the same type & returns a map
 func MergeStructsToMap(original, incoming struct{}) map[string]interface{} {
 	mergedStruct := make(map[string]interface{})
 	v := reflect.ValueOf(incoming)
