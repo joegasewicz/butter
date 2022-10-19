@@ -3,6 +3,11 @@ Merge Go structs
 
 ### Merge 2 structs & return a map
 ```go
+type user struct {
+    Name string
+    Msg  string
+}
+
 user1 := user{
 Name: "joe",
 }
