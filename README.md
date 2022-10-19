@@ -1,7 +1,12 @@
 # Butter
 Merge Go structs
 
-### Merge 2 structs & return a map
+### Install
+```
+go get -u github.com/joegasewicz/butter
+```
+
+#### Merge 2 structs & return a map
 ```go
 type user struct {
     Name string
