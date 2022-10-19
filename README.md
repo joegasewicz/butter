@@ -1,5 +1,5 @@
 # Butter
-Merges 2 Go structs
+Merge 2 Go structs
 
 ### Merge 2 structs & return a map
 ```go
