@@ -9,10 +9,10 @@ type user struct {
 }
 
 user1 := user{
-Name: "joe",
+    Name: "joe",
 }
 user2 := user{
-Msg: "hello!",
+    Msg: "hello!",
 }
 result := butter.MergeStructsToMap(user1, user2)
 
