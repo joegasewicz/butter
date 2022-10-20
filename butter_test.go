@@ -3,18 +3,20 @@ package butter
 import "testing"
 
 type user struct {
+	ID   uint
 	Name string
 	Msg  string
 }
 
 func TestMergeStructsToMap(t *testing.T) {
-	user1 := user{
+	incoming := user{
 		Name: "joe",
 	}
-	user2 := user{
+	original := user{
+		ID:  1,
 		Msg: "hello!",
 	}
-	result := MergeStructsToMap(user1, user2)
+	result := MergeStructsToMap(original, incoming)
 	if result == nil {
 		t.Logf("expected result to not be null\n")
 		t.Fail()
@@ -25,6 +27,10 @@ func TestMergeStructsToMap(t *testing.T) {
 	}
 	if result["Msg"] != "hello!" {
 		t.Logf("expected name to be joe but got %s", result["Msg"])
+		t.Fail()
+	}
+	if result["ID"] != uint(1) {
+		t.Logf("expected id to be 1 but got %d", result["ID"])
 		t.Fail()
 	}
 }
