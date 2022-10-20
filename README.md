@@ -27,6 +27,7 @@ original := user{
 merged := butter.MergeStructsToMap(original, incoming)
 
 // returns
+// ID -> 1
 // Name -> Joe
 // Description -> hello!
 // Not we could pass the result to GORM's `Updates` method
